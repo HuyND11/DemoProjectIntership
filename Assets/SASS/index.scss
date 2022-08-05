@@ -1,0 +1,9 @@
+// sass ./Assets/SASS/index.scss ./Assets/Css/app.css --watch
+
+@import "./__reset";
+@import "./__variables";
+@import "./_global";
+// @import "./header.scss";
+// @import "./home.scss";
+@import "./wireFrame.scss";
+@import "./responsive.scss";

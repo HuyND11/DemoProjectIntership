@@ -1,0 +1,123 @@
+@media screen and (max-width: 920px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative;
+        &-nav {
+            display: none;
+            position: absolute;
+            top: 80px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin-bottom: 10px;
+            z-index: 100;
+            // animation: navAnimation ease 0.3s;
+            &__list {
+                background-color: $while;
+                flex-direction: column;
+                gap: 1.5em;
+                text-align: justify;
+            }
+            &__item {
+                // width: 100%;
+                padding-bottom: 12px;
+            }
+            &__item:hover {
+                border-bottom: 2px solid $black;
+            }
+        }
+        &-icon__menu {
+            display: flex;
+        }
+    }
+    .active {
+        display: block;
+    }
+
+    .feature {
+        &-list {
+            grid-template-areas:
+            "f1 f1 f2 f2"
+            "f1 f1 f3 f3"
+            "f1 f1 f4 f4";
+        }
+    }
+
+    .product {
+        &-nav {
+            height: auto;
+            // line-height: 12px;
+            text-align: justify;
+            &__list {
+                flex-direction: column;
+                gap: 1.5rem;
+                &:first-child {
+                    padding-top: 12px;
+                }
+                &:last-child {
+                    padding-bottom: 12px;
+                }
+            } 
+        }
+        &-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .about {
+        &-description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6; /* number of lines to show */
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    }
+    .footer {
+        &-top {
+            padding: 24px 0;
+            .btn-sign-up {
+                left: 75%;
+            }
+        }
+        &-center {
+            flex-direction: column;
+            padding: 24px 0;
+            & > div {
+                margin: 12px 0;
+            }
+            &-mid {
+                // flex-direction: column;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .feature {
+        &-list {
+            grid-template-areas:
+            "f1"
+            "f2"
+            "f3"
+            "f4";
+        }
+    }
+    .product {
+        &-list {
+            grid-template-columns: 1fr;
+        }
+    }
+    .footer {
+        &-top {
+            padding: 24px 0;
+            .btn-sign-up {
+                display: none;
+                left: 50%;
+            }
+        }
+    }
+}

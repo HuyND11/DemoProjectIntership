@@ -1,0 +1,61 @@
+// font-family
+$font-Roboto: "Roboto", sans-serif;
+$font-Montserrat: "Montserrat", sans-serif;
+$font-Poppins: "Poppins", sans-serif;
+
+// color
+$black: #000000;
+$while: #ffffff;
+$color-1: #404040;
+$color-2: #656565;
+$color-wireFrame: #e1e1e1;
+
+:root {
+    //font-size
+    --fz-1: 15px;
+    --fz-2: 16px;
+    --fz-3: 18px;
+    --fz-4: 20px;
+    --fz-5: 32px;
+    --fz-6: 48px;
+
+    // font-weight
+    --fw-1: 300;
+    --fw-2: 400;
+    --fw-3: 500;
+    --fw-4: 600;
+    --fw-5: 700;
+}
+
+@media screen and (max-width: 920px) {
+    :root {
+        --fz-1: 13px;
+        --fz-2: 14px;
+        --fz-3: 16px;
+        --fz-4: 18px;
+        --fz-5: 28px;
+        --fz-6: 38px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --fz-1: 12px;
+        --fz-2: 13px;
+        --fz-3: 15px;
+        --fz-4: 16px;
+        --fz-5: 26px;
+        --fz-6: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --fz-1: 11px;
+        --fz-2: 12;
+        --fz-3: 14;
+        --fz-4: 15;
+        --fz-5: 25;
+        --fz-6: 30px;
+    }
+}
