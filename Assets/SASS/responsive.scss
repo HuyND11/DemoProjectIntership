@@ -1,5 +1,12 @@
 @media screen and (max-width: 920px) {
-
+    .footer {
+        &-top {
+            padding: 24px 0;
+            .btn-sign-up {
+                left: 70%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -49,18 +56,22 @@
     .product {
         &-nav {
             height: auto;
-            // line-height: 12px;
             text-align: justify;
+            
             &__list {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 16px;
                 &:first-child {
-                    padding-top: 12px;
+                    padding-top: 16px;
                 }
                 &:last-child {
-                    padding-bottom: 12px;
+                    padding-bottom: 16px;
                 }
             } 
+            &__item:hover &__underline {
+                display: none;
+            }
+            
         }
         &-list {
             grid-template-columns: repeat(2, 1fr);
@@ -79,18 +90,12 @@
     .footer {
         &-top {
             padding: 24px 0;
-            .btn-sign-up {
-                left: 75%;
-            }
         }
         &-center {
             flex-direction: column;
             padding: 24px 0;
             & > div {
                 margin: 12px 0;
-            }
-            &-mid {
-                // flex-direction: column;
             }
         }
     }
@@ -107,17 +112,19 @@
         }
     }
     .product {
+        &-nav {
+            &__item:hover &__underline {
+                display: none;
+            }
+        }
         &-list {
             grid-template-columns: 1fr;
         }
+        
     }
     .footer {
         &-top {
             padding: 24px 0;
-            .btn-sign-up {
-                display: none;
-                left: 50%;
-            }
         }
     }
 }
