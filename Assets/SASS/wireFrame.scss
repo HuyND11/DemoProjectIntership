@@ -13,7 +13,7 @@ header {
         width: 100%;
         height: 80px;
         border-radius: 5px;
-        margin: 0 16px;
+        padding: 0 16px;
 
         &_logo {
             width: 60px;
@@ -97,8 +97,8 @@ main {
         width: 100%;
         height: 41.6vw;
         min-height: 400px;
-        padding: 15px 0;
-        margin: 0 16px;
+        padding: 15px 16px;
+        
 
         &-slide {
             position: relative;
@@ -361,133 +361,6 @@ main {
     }
 }
 
-// .footer {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100%;
-//     height: 530px;
-//     text-align: center;
-//     background-color: #404040;
-//     color: $while;
-//     &_top {
-//         width: 100%;
-//         padding-top: 64px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         &_heading {
-//             font-size: var(--fz-2);
-//             font-weight: var(--fw-5);
-//             margin-bottom: 16px;
-//         }
-//         .form_group {
-//             width: 32vw;
-//             display: flex;
-//             align-items: center;
-//             height: 48px;
-//             background-color: $while;
-//             border-radius: 40px;
-//             &_input {
-//                 border: none;
-//                 padding: 0 12px;
-//                 border: none;
-//                 margin: 0 6px;
-//                 border-radius: 99px;
-//                 font-size: var(--fz-1);
-//                 font-family: $font-Poppins;
-//                 font-weight: var(--fw-1);
-//             }
-//             &_btn {
-//                 margin-left: auto;
-//                 height: 100%;
-//                 padding: 0 12px;
-//                 border-radius: 99px;
-//                 background-color: $while;
-//                 border: none;
-//                 font-family: $font-Roboto;
-//                 font-size: var(--fz-1);
-//                 font-weight: var(--fw-1);
-//                 &:hover {
-//                     background-color: $color-2;
-//                     transition: 0.3s;
-//                 }
-//             }
-//         }
-//     }
-//     &_mid {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         width: 100%;
-//         margin-top: 64px;
-//         & > div {
-//             margin: 0 64px;
-//         }
-//         &_right {
-//             &_logo {
-//                 font-size: var(--fz-5);
-//                 font-weight: var(--fw-5);
-//             }
-//         }
-//         &_center {
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-//             &_nav {
-//                 margin: 0 68px;
-//                 text-align: start;
-//                 &_list {
-//                     display: flex;
-//                     flex-direction: column;
-//                 }
-//                 &_item {
-//                     &:nth-child(1) {
-//                         margin-bottom: 32px;
-//                         .footer_mid_center_nav_link {
-//                             color: $color-2;
-
-//                         }
-//                     }
-//                     &:nth-child(2) {
-//                         margin-bottom: 16px;
-//                     }
-//                 }
-//                 &_link {
-//                     color: $color-wireFrame;
-//                 }
-//             }
-//         }
-//         &_left {
-//             display: flex;
-//             &_item {
-//                 width: 32px;
-//                 height: 32px;
-//                 border: 2px solid $while;
-//                 border-radius: 100%;
-//                 margin: 0 8px;
-//             }
-//         }
-//     }
-//     &_bottom {
-//         margin-top: 32px;
-//         padding-bottom: 33px;
-//         &_content {
-//             font-family: $font-Roboto;
-//             font-size: var(--fz-1);
-//             font-weight: var(--fw-1);
-//         }
-//     }
-//     &_line {
-//         width: 100%;
-//         height: 1px;
-//         background-color: red       ;
-//         margin-top: 64px;
-//     }
-// }
-
 .footer {
     align-items: center;
     justify-content: center;
@@ -498,7 +371,6 @@ main {
     background-color: $color-1;
     & > div {
         width: 100%;
-        // padding: 64px 0;
     }
     &-top {
         width: 100%;
@@ -534,8 +406,8 @@ main {
             }
             &-btn {
                 margin-left: auto;
+                padding: 16px 12px;
                 border-radius: 99px;
-                padding: 12px 6px;
                 border: none;
                 outline: none;
                 background-color: transparent;
