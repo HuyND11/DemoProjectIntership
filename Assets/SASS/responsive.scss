@@ -22,8 +22,6 @@
                 }
             }
         }
-
-
     }
     .footer {
         &_mid {
@@ -50,7 +48,8 @@
                     display: block;
                 }
                 &:checked ~ .nav {
-                    transform: translateX(0);
+                    // transform: translateX(0);
+                    right: 0;
                     animation: showNavMobile ease 0.3s;
                 }
             }
@@ -59,10 +58,9 @@
                 max-width: 280px;
                 position: fixed;
                 top: 0;
-                right: 0;
+                right: -300px;
                 background-color: #fff;
                 bottom: 0;
-                transform: translateX(100%);
                 animation: hiddenNavMobile ease 0.3s;
                 &_list {
                     flex-direction: column;
@@ -99,18 +97,18 @@
     }
     @keyframes showNavMobile {
         from {
-            transform: translateX(100%);
+            right: -300px;
         }
         to {
-            transform: translateX(0);
+            right: 0;
         }
     }
     @keyframes hiddenNavMobile {
         from {
-            transform: translateX(0);
+            right: 0;
         }
         to {
-            transform: translateX(100%);
+            right: -300px;;
         }
     }
 }
