@@ -1,9 +1,11 @@
-const showNavMobile = () => {
-    const x = document.querySelector(".header-nav");
-    if(x.classList.contains("active")) {
-        x.classList.remove("active");
+window.onscroll = function() {
+    const header = document.getElementsByTagName('header');
+    if(window.scrollY >= 80 || window.pageYOffset >= 80) {
+        header[0].classList.add("box-shadow");
     }else {
-        x.classList.add("active");
+        header[0].classList.remove("box-shadow");
     }
-}
+}  ;
+
+
 
