@@ -36,6 +36,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  vertical-align: middle;
 }
 
 ul,
@@ -92,7 +93,6 @@ body {
 }
 
 .wrapper {
-  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -159,7 +159,6 @@ html {
 }
 
 header {
-  max-width: 1920px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -199,6 +198,9 @@ header .header .nav_list {
 }
 header .header .nav_item {
   margin-left: 40px;
+}
+header .header .nav_item:last-child {
+  margin-left: 55px;
 }
 header .header .nav_link {
   color: #000000;
@@ -249,9 +251,9 @@ main .slider {
 }
 main .swiper {
   width: 100%;
-  height: 41.6vw;
+  height: 41.666666666vw;
   min-height: 400px;
-  padding: 15px 16px;
+  max-height: 800px;
 }
 main .swiper-slide {
   position: relative;
@@ -268,16 +270,18 @@ main .swiper-slide {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  padding: 15px 16px;
 }
 main .swiper-slide-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  max-width: 50%;
+  max-width: 487px;
   padding: 0 12px;
   position: absolute;
   left: 86px;
+  top: 39.5%;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -289,6 +293,7 @@ main .swiper-slide-content-heading {
   font-family: "Montserrat", sans-serif;
   font-size: var(--fz-6);
   font-weight: var(--fw-5);
+  margin-bottom: 16px;
 }
 main .swiper-slide-content-content {
   font-size: var(--fz-1);
@@ -311,57 +316,30 @@ main .feature-container .feature {
   justify-content: center;
   width: 100%;
   height: 651px;
+  padding: 0 16px;
 }
 main .feature-container .feature_list {
-  display: flex;
-  height: 580px;
+  display: grid;
+  grid-template-areas: "f1 f1 f2 f3" "f1 f1 f4 f4";
   width: 100%;
-  margin: 0 -16px;
-}
-main .feature-container .feature_right {
-  width: 50%;
-  padding: 0 16px;
-}
-main .feature-container .feature_right > div {
   height: 100%;
-  background-color: #e1e1e1;
+  gap: 32px;
+}
+main .feature-container .feature_item {
   border-radius: 10px;
-}
-main .feature-container .feature_left {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  padding: 0 16px;
-  margin: -16px 0;
-}
-main .feature-container .feature_left_top {
-  width: 100%;
-  height: 50%;
-  padding: 16px 0;
-}
-main .feature-container .feature_left_top > div {
-  display: flex;
-  margin: 0 -16px;
-  height: 100%;
-}
-main .feature-container .feature_left_top_item {
-  width: 50%;
-  padding: 0 16px;
-}
-main .feature-container .feature_left_top_item > div {
-  height: 100%;
   background-color: #e1e1e1;
-  border-radius: 10px;
 }
-main .feature-container .feature_left_bottom {
-  width: 100%;
-  height: 50%;
-  padding: 16px 0;
+main .feature-container .feature_item:nth-child(1) {
+  grid-area: f1;
 }
-main .feature-container .feature_left_bottom > div {
-  height: 100%;
-  background-color: #e1e1e1;
-  border-radius: 10px;
+main .feature-container .feature_item:nth-child(2) {
+  grid-area: f2;
+}
+main .feature-container .feature_item:nth-child(3) {
+  grid-area: f3;
+}
+main .feature-container .feature_item:nth-child(4) {
+  grid-area: f4;
 }
 main .product-container {
   padding-top: 150px;
@@ -434,7 +412,7 @@ main .product-container .product_cart {
 }
 main .product-container .product_cart_aside {
   width: 100%;
-  height: 274px;
+  height: 247px;
 }
 main .product-container .product_cart_img {
   height: 100%;
@@ -471,12 +449,15 @@ main .about-container .about {
   justify-content: center;
   width: 100%;
   height: 46.875vw;
+  min-height: 300px;
+  max-height: 900px;
   padding: 6px 0;
 }
 main .about-container .about_content {
   display: -webkit-box;
   width: 30vw;
   min-width: 300px;
+  max-width: 581px;
   margin-bottom: 32px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -510,8 +491,8 @@ main .about-container .about_btn:hover {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 530px;
   background-color: #404040;
+  padding: 0 16px;
 }
 .footer > div {
   width: 100%;
@@ -531,27 +512,30 @@ main .about-container .about_btn:hover {
 .footer-top .form-group {
   display: flex;
   align-items: center;
-  width: 39%;
+  max-width: 616px;
   height: 48px;
-  padding: 0 6px;
-  margin: 0 auto;
   border-radius: 40px;
   background-color: #ffffff;
+  overflow: hidden;
+  margin: 0 auto;
 }
 .footer-top .form-group-input {
-  width: 50%;
-  border: none;
-  margin: 0 6px;
+  display: flex;
+  flex: 1;
+  min-height: 48px;
+  padding-left: 40px;
   font-size: var(--fz-1);
   font-family: "Poppins", sans-serif;
   font-weight: var(--fw-1);
-}
-.footer-top .form-group-input:focus {
   border: none;
+  outline: none;
 }
 .footer-top .form-group-btn {
-  margin-left: auto;
-  padding: 16px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 40px;
   border-radius: 99px;
   border: none;
   outline: none;
@@ -560,6 +544,7 @@ main .about-container .about_btn:hover {
 }
 .footer-top .form-group-btn:hover {
   background-color: #404040;
+  color: #ffffff;
 }
 .footer-center {
   display: flex;
@@ -616,6 +601,12 @@ main .about-container .about_btn:hover {
   header .header .nav_item {
     margin-left: 20px;
   }
+  header .header .nav_item:last-child {
+    margin-left: 25px;
+  }
+  main .feature-container .feature_list {
+    grid-template-areas: "f1 f2" "f3 f4";
+  }
   main .product-container .product_nav_list {
     overflow-x: scroll;
     justify-content: flex-start;
@@ -653,7 +644,7 @@ main .about-container .about_btn:hover {
     right: -300px;
     background-color: #fff;
     bottom: 0;
-    animation: hiddenNavMobile ease 0.3s;
+    transition: 0.3s;
   }
   header .header .nav_list {
     flex-direction: column;
@@ -672,6 +663,12 @@ main .about-container .about_btn:hover {
     top: 21px;
     right: 36px;
   }
+  main .swiper-slide-content {
+    top: 29.5%;
+  }
+  main .feature-container .feature_list {
+    grid-template-areas: "f1" "f2" "f3" "f4";
+  }
   .footer-top {
     padding: 24px 0;
   }
@@ -682,22 +679,6 @@ main .about-container .about_btn:hover {
   .footer-center > div {
     margin: 12px 0;
   }
-  @keyframes showNavMobile {
-    from {
-      right: -300px;
-    }
-    to {
-      right: 0;
-    }
-  }
-  @keyframes hiddenNavMobile {
-    from {
-      right: 0;
-    }
-    to {
-      right: -300px;
-    }
-  }
 }
 @media screen and (max-width: 480px) {
   header .header {
@@ -705,6 +686,9 @@ main .about-container .about_btn:hover {
   }
   header .header .nav-bars {
     right: 0;
+  }
+  main .swiper-slide-content {
+    top: 19.5%;
   }
   main .product-container .product_cart {
     width: 100%;

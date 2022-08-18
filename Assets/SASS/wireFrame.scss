@@ -1,5 +1,4 @@
 header {
-    max-width: 1920px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -31,7 +30,6 @@ header {
             left: 0;
             bottom: 0;
             background-color: rgba($color: #000000, $alpha: 0.3);
-            // background-color: $black;
             opacity: 0.3;
         }
         .nav {
@@ -42,6 +40,9 @@ header {
             }
             &_item {
                 margin-left: 40px;
+                &:last-child{
+                    margin-left: 55px;
+                }
             }
             &_link {
                 color: $black;
@@ -95,9 +96,9 @@ main {
 
     .swiper {
         width: 100%;
-        height: 41.6vw;
+        height: 41.666666666vw;
         min-height: 400px;
-        padding: 15px 16px;
+        max-height: 800px;
         
 
         &-slide {
@@ -115,16 +116,18 @@ main {
             -ms-flex-align: center;
             -webkit-align-items: center;
             align-items: center;
+            padding: 15px 16px;
 
             &-content {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
-                max-width: 50%;
+                max-width: 487px;
                 padding: 0 12px;
                 position: absolute;
                 left: 86px;
+                top: calc((316/800) *100%);
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -135,6 +138,7 @@ main {
                     font-family: $font-Montserrat;
                     font-size: var(--fz-6);
                     font-weight: var(--fw-5);
+                    margin-bottom: 16px;
                 }
 
                 &-content {
@@ -162,56 +166,29 @@ main {
             justify-content: center;
             width: 100%;
             height: 651px;
+            padding: 0 16px;
             &_list {
-                display: flex;
-                height: 580px;
+                display: grid;
+                grid-template-areas: "f1 f1 f2 f3" "f1 f1 f4 f4";
                 width: 100%;
-                margin: 0 -16px;
+                height: 100%;
+                gap: 32px;
             }
-            &_right {
-                width: 50%;
-                padding: 0 16px;
-                > div {
-                    height: 100%;
-                    background-color: $color-wireFrame;
-                    border-radius: 10px;
-                }
+            &_item {
+                border-radius: 10px;
+                background-color: $color-wireFrame;
             }
-            &_left {
-                display: flex;
-                width: 50%;
-                flex-direction: column;
-                padding: 0 16px;
-                margin: -16px 0;
-                &_top {
-                    width: 100%;
-                    height: 50%;
-                    padding: 16px 0;
-                    > div {
-                        display: flex;
-                        margin: 0 -16px;
-                        height: 100%;
-                    }
-                    &_item {
-                        width: 50%;
-                        padding: 0 16px;
-                        > div {
-                            height: 100%;
-                            background-color: $color-wireFrame;
-                            border-radius: 10px;
-                        }
-                    }
-                }
-                &_bottom {
-                    width: 100%;
-                    height: 50%;
-                    padding: 16px 0;
-                    > div {
-                        height: 100%;
-                        background-color: $color-wireFrame;
-                        border-radius: 10px;
-                    }
-                }
+            &_item:nth-child(1) {
+                grid-area: f1;
+            }
+            &_item:nth-child(2) {
+                grid-area: f2;
+            }
+            &_item:nth-child(3) {
+                grid-area: f3;
+            }
+            &_item:nth-child(4) {
+                grid-area: f4;
             }
         }
     }
@@ -285,7 +262,7 @@ main {
                 padding: 16px;
                 &_aside {
                     width: 100%;
-                    height: 274px;
+                    height: 247px;
                 }
                 &_img {
                     height: 100%;
@@ -326,11 +303,14 @@ main {
             justify-content: center;
             width: 100%;
             height: 46.875vw;
+            min-height: 300px;
+            max-height: 900px;
             padding: 6px 0;
             &_content {
                 display: -webkit-box;
                 width: 30vw;
                 min-width: 300px;
+                max-width: 581px;
                 margin-bottom: 32px;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -367,8 +347,8 @@ main {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    height: 530px;
     background-color: $color-1;
+    padding: 0 16px;
     & > div {
         width: 100%;
     }
@@ -387,26 +367,29 @@ main {
         .form-group {
             display: flex;
             align-items: center;
-            width: 39%  ;
+            max-width: 616px;
             height: 48px;
-            padding: 0 6px;
-            margin: 0 auto;
             border-radius: 40px;
             background-color: $while;
+            overflow: hidden;
+            margin: 0 auto;
             &-input {
-                width: 50%;
-                border: none;
-                margin: 0 6px;
+                display: flex;
+                flex: 1;
+                min-height: 48px;
+                padding-left: 40px;
                 font-size: var(--fz-1);
                 font-family: $font-Poppins;
                 font-weight: var(--fw-1);
-                &:focus {
-                    border: none;
-                }
+                border: none;
+                outline: none;
             }
             &-btn {
-                margin-left: auto;
-                padding: 16px 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 48px;
+                padding: 0 40px;
                 border-radius: 99px;
                 border: none;
                 outline: none;
@@ -414,6 +397,7 @@ main {
                 transition: 0.3s;
                 &:hover {
                     background-color: $color-1;
+                    color: $while;
                 }
             }
         }
