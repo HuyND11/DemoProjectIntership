@@ -8,15 +8,18 @@ header {
     .header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         width: 100%;
         height: 80px;
         border-radius: 5px;
-        padding: 0 16px;
+        padding: 0 14px; 
 
         &_logo {
             width: 60px;
             height: 60px;
+            &_image {
+                width: 100%;
+                height: 100%;
+            }
         }
         #check-nav-mobile {
             display: none;
@@ -30,9 +33,10 @@ header {
             left: 0;
             bottom: 0;
             background-color: rgba($color: #000000, $alpha: 0.3);
-            opacity: 0.3;
+            opacity: 0.5;
         }
         .nav {
+            margin-left: 18.385416666vw ;
             &_list {
                 display: flex;
                 align-items: center;
@@ -40,7 +44,11 @@ header {
             }
             &_item {
                 margin-left: 40px;
-                &:last-child{
+                white-space: nowrap;
+                &:nth-child(2) {
+                    margin-left: 0; 
+                }
+                &:last-child {
                     margin-left: 55px;
                 }
             }
@@ -99,7 +107,6 @@ main {
         height: 41.666666666vw;
         min-height: 400px;
         max-height: 800px;
-        
 
         &-slide {
             position: relative;
@@ -123,7 +130,7 @@ main {
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
-                max-width: 487px;
+                max-width: 504px;
                 padding: 0 12px;
                 position: absolute;
                 left: 86px;
@@ -140,8 +147,7 @@ main {
                     font-weight: var(--fw-5);
                     margin-bottom: 16px;
                 }
-
-                &-content {
+                &-body {
                     font-size: var(--fz-1);
                     font-family: $font-Roboto;
                     font-weight: var(--fw-2);
@@ -151,6 +157,11 @@ main {
         &-button-next,
         &-button-prev {
             color: $black;
+        }
+        &-pagination-bullet {
+            opacity: 1;
+            background-color: $color-wireFrame;
+            border: 2px solid $black;
         }
         &-pagination-bullet-active {
             background-color: $black;
@@ -194,7 +205,7 @@ main {
     }
 
     .product-container {
-        padding-top: 150px;
+        margin-top: 150px;
         .product {
             display: flex;
             flex-direction: column;
@@ -238,6 +249,7 @@ main {
                     font-family: $font-Montserrat;
                     font-size: var(--fz-3);
                     font-weight: var(--fw-2);
+                    white-space: nowrap;
                 }
                 &_underline {
                     display: none;
@@ -258,7 +270,6 @@ main {
             }
             &_cart {
                 width: calc(100% / 3);
-                // height: 311px;
                 padding: 16px;
                 &_aside {
                     width: 100%;
@@ -268,6 +279,7 @@ main {
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
+                    border-radius: 10px;
                 }
                 &_body {
                     margin-top: 16px;
@@ -309,8 +321,6 @@ main {
             &_content {
                 display: -webkit-box;
                 width: 30vw;
-                min-width: 300px;
-                max-width: 581px;
                 margin-bottom: 32px;
                 overflow: hidden;
                 text-overflow: ellipsis;

@@ -1,8 +1,19 @@
+@media screen and (max-width: 1200px) {
+    header {
+        .header {
+            .nav {
+                margin-left: 100px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {
 
     header {
         .header {
             .nav {
+                margin-left: 50px;
                 &_item {
                     margin-left: 20px;
                     &:last-child{
@@ -30,6 +41,13 @@
                 }
                 &_cart {
                     width: 50%;
+                }
+            }
+        }
+        .about-container {
+            .about {
+                &_content {
+                    margin-bottom: 16px;
                 }
             }
         }
@@ -98,16 +116,22 @@
             &-slide {
                 &-content {
                     top: calc(((316/800) * 100%) - 10%);
+                    left: 0;
+                }
+            }
+            &-button-next,
+            &-button-prev {
+                display: none;
+            }
+        }
+        .about-container {
+            .about {
+                &_content {
+                    width: 100%;
                 }
             }
         }
-        .feature-container {
-            .feature {
-                &_list {
-                    grid-template-areas: "f1" "f2" "f3" "f4" ;
-                }
-            }
-        }
+        
     }
 
     .footer {
@@ -134,20 +158,32 @@
         }
     }
     main {
-        .swiper {
-            &-slide {
-                &-content {
-                    top: calc(((316/800) * 100%) - 20%);
+        // .swiper {
+        //     &-slide {
+        //         &-content {
+                    // top: calc(((316/800) * 100%) - 20%);
+        //         }
+        //     }
+        // }
+        .feature-container {
+            margin-top: 32px;
+            .feature {
+                height: 1200px;
+                &_list {
+                    grid-template-areas: "f1" "f2" "f3" "f4" ;
                 }
             }
         }
         .product-container {
+            margin-top: 32px;
             .product {
-                
                 &_cart {
                     width: 100%;
                 }
             }
+        }
+        .about-container{
+            margin-top: 32px;
         }
     }
     .footer {
