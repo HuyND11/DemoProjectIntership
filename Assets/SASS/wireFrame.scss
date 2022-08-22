@@ -36,7 +36,7 @@ header {
             opacity: 0.5;
         }
         .nav {
-            margin-left: 18.385416666vw ;
+            margin-left: 353px ;
             &_list {
                 display: flex;
                 align-items: center;
@@ -389,6 +389,7 @@ main {
                 flex: 1;
                 min-height: 48px;
                 padding-left: 40px;
+                padding-right: 20px;
                 font-size: var(--fz-1);
                 font-family: $font-Poppins;
                 font-weight: var(--fw-1);
@@ -410,6 +411,9 @@ main {
                 &:hover {
                     background-color: $color-1;
                     color: $while;
+                }
+                &:active {
+                    opacity: 0.8;
                 }
             }
         }

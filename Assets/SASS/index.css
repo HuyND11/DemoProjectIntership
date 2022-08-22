@@ -157,7 +157,7 @@ header {
       background-color: rgba(0, 0, 0, 0.3);
       opacity: 0.5; }
     header .header .nav {
-      margin-left: 18.385416666vw; }
+      margin-left: 353px; }
       header .header .nav_list {
         display: flex;
         align-items: center;
@@ -450,6 +450,7 @@ main {
         flex: 1;
         min-height: 48px;
         padding-left: 40px;
+        padding-right: 20px;
         font-size: var(--fz-1);
         font-family: "Poppins", sans-serif;
         font-weight: var(--fw-1);
@@ -470,6 +471,8 @@ main {
         .footer-top .form-group-btn:hover {
           background-color: #404040;
           color: #ffffff; }
+        .footer-top .form-group-btn:active {
+          opacity: 0.8; }
   .footer-center {
     display: flex;
     align-items: center;
@@ -607,6 +610,7 @@ main {
   .footer-top {
     padding: 24px 0; }
   .footer .form-group-btn {
+    padding: 0 25px;
     background-color: #404040;
     color: #ffffff; } }
 
