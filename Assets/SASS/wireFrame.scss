@@ -65,7 +65,8 @@ header {
                 top: 15px;
                 right: 40px;
                 font-size: var(--fz-5);
-                font-weight: var(--fw-3);
+                font-weight: var(--fw-4);
+                text-transform: uppercase;
             }
             .quantity-cart {
                 display: inline-block;
@@ -85,8 +86,8 @@ header {
             height: 32px;
             flex-direction: column;
             & span {
-                padding: 3px 0;
-                margin: 3px 0;
+                padding: 2px 0;
+                margin: 4px 0;
                 background-color: $black;
                 border-radius: 5px;
             }
@@ -404,6 +405,7 @@ main {
                 border: none;
                 outline: none;
                 background-color: transparent;
+                white-space: nowrap;
                 transition: 0.3s;
                 &:hover {
                     background-color: $color-1;

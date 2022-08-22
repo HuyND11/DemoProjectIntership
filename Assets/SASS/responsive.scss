@@ -190,5 +190,12 @@
         &-top {
             padding: 24px 0;
         }
+        .form-group {
+            &-btn {
+                // flex: 1;
+                background-color: $color-1;
+                    color: $while;
+            }
+        }
     }
 }
