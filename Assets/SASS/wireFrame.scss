@@ -438,17 +438,22 @@ main {
             gap: 170px;
             text-align: left;
             &-nav {
-                color: $while;
+                
             }
             &-item {
                 margin-bottom: 16px;
                 &:nth-child(1) {
                     margin-bottom: 32px;
-                    color: $color-2;
+                    .footer-center-mid-link {
+                        color: $color-2;
+                    }
                 }
                 &:last-child {
                     margin: 0;
                 }
+            }
+            &-link {
+                color: $while;
             }
         }
         &-left {
